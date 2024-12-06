@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greybackground">
+
+    <!-- Toolbar Section -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#000000"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/dm_sans_semibold"
+            android:gravity="center"
+            android:text="BACK"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <!-- Settings Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/homebtn"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Settings"
+                android:padding="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_homewhite" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Main Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center">
+
+            <!-- Form Title -->
+            <TextView
+                android:id="@+id/formTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/schibsted_grotesk_semibold"
+                android:gravity="center"
+                android:text="Add Your Plant"
+                android:textColor="#2D2D2D"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <!-- Plant Image -->
+            <ImageView
+                android:id="@+id/plantImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/pla"
+                android:layout_marginBottom="15dp" />
+
+            <!-- Plant Name Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/plantNameInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@android:color/white"
+                app:boxStrokeColor="#44F1A6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/plantName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#050505"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/schibsted_grotesk_medium"
+                    android:hint="Plant Name"
+                    android:maxLength="30"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Plant Type Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/plantTypeInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@android:color/white"
+                app:boxStrokeColor="#44F1A6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/plantType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#050505"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/schibsted_grotesk_medium"
+                    android:hint="Plant Type"
+                    android:maxLength="30"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Plant Age Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/plantAgeInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@android:color/white"
+                app:boxStrokeColor="#44F1A6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/plantAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#050505"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/schibsted_grotesk_medium"
+                    android:hint="Plant Age (Weeks)"
+                    android:maxLength="3"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fertilizerInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:boxBackgroundMode="outline"
+                app:boxBackgroundColor="@android:color/white"
+                app:boxStrokeColor="#44F1A6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateajout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#050505"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/schibsted_grotesk_medium"
+                    android:hint="Date d'ajout"
+                    android:maxLength="30"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Select Image Button -->
+            <Button
+                android:id="@+id/selectPlantImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Plant Image"
+                android:layout_marginBottom="24dp"
+                android:textStyle="bold"
+                android:textColor="#1A1919"
+                android:background="@drawable/green_background"
+                android:textSize="16sp"
+                android:fontFamily="@font/schibsted_grotesk_medium"
+                android:layout_gravity="center" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:layout_marginBottom="16dp"
+                android:textColor="#1F1E1E"
+                android:background="@drawable/green_background"
+                android:textSize="16sp"
+                android:fontFamily="@font/dm_sans_semibold"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

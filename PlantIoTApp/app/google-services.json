@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "932244975108",
+    "firebase_url": "https://plante-7b6f6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "plante-7b6f6",
+    "storage_bucket": "plante-7b6f6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932244975108:android:ddd2b3ebba6ccdee5e8f51",
+        "android_client_info": {
+          "package_name": "com.example.plantiotapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP76FZ-9DBndg3YoGAtSXDdQ2jU7CGgXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

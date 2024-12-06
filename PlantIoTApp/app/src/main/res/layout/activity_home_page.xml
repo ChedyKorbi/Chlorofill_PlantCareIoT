@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greybackground">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/homePageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:fontFamily="@font/dm_sans_semibold"
+            android:gravity="center"
+            android:text="HOME PAGE"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Content Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!-- Intro Image -->
+            <ImageView
+                android:id="@+id/introImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/pla3"
+            android:contentDescription="Intro Image"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop" />
+
+            <!-- Introduction Text -->
+            <TextView
+                android:id="@+id/introText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/schibsted_grotesk_medium"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:layout_marginTop="12dp"
+                android:text=" Start by adding your plant and embark on a journey to help it thrive and live a healthier, happier life."
+                android:textColor="#2D2D2D"
+                android:textSize="15sp"
+                android:padding="12sp"
+                android:layout_marginBottom="30dp" />
+
+            <!-- Add Your Plant Button -->
+            <Button
+                android:id="@+id/addPlantButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:text=" ADD YOUR PLANT"
+                android:drawableLeft="@drawable/ic_add"
+                android:background="@drawable/green_background"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="@font/schibsted_grotesk_medium"
+                android:textSize="16sp"
+                android:padding="10dp" />
+
+            <!-- Footer -->
+            <TextView
+                android:id="@+id/footerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_semibold"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:text=" 🌱 Plant IoT App © 2024\nApplication Mini Projet 🌱 "
+                android:textColor="#7A7A7A"
+                android:textSize="14sp"
+                android:layout_marginTop="130dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
